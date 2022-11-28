@@ -3,22 +3,22 @@
     "name": "Ginko Bus, not suspicous at all",
     "icons": [
       {
-        "src": "/icons/icon-256.png",
+        "src": "icons/icon-256.png",
         "type": "image/png",
         "sizes": "512x512"
       },
       {
-        "src": "/icons/icon-192.png",
+        "src": "icons/icon-192.png",
         "type": "image/png",
         "sizes": "192x192"
       },
       {
-        "src": "/icons/icon-512.png",
+        "src": "icons/icon-512.png",
         "type": "image/png",
         "sizes": "512x512"
       },
       {
-        "src": "/icons/maskable_icon.png",
+        "src": "icons/maskable_icon.png",
         "type": "image/png",
         "sizes": "274x274",
         "purpose": "any maskable" 
