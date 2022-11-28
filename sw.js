@@ -25,7 +25,7 @@ self.addEventListener('install', (e) => {
     e.waitUntil((async () => {
         const cache = await caches.open(cacheName);
         console.log('[Service Worker] Caching all: app shell and content');
-        await cache.addAll(contentToCache);
+        await cache.addAll(appShellFiles);
       })());
 
 });
@@ -33,6 +33,24 @@ self.addEventListener('install', (e) => {
 
 
 self.addEventListener('fetch', (e) => {
+
+    self.addEventListener('fetch', function (event) {
+        event.respondWith(
+          caches.open('mysite-dynamic').then(function (cache) {
+            return cache.match(event.request).then(function (response) {
+              return (
+                response ||
+                fetch(event.request).then(function (response) {
+                  cache.put(event.request, response.clone());
+                  return response;
+                })
+              );
+            });
+          }),
+        );
+      });
+
+    /*
     e.respondWith((async () => {
       const r = await caches.match(e.request);
       console.log(`[Service Worker] Fetching resource: ${e.request.url}`);
@@ -43,6 +61,7 @@ self.addEventListener('fetch', (e) => {
       cache.put(e.request, response.clone());
       return response;
     })());
+    */
   });
   
 
