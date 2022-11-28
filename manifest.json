@@ -1,0 +1,28 @@
+{
+    "short_name": "Ginko Bus",
+    "name": "Ginko Bus, not suspicous at all",
+    "icons": [
+      {
+        "src": "/icons/icon-256.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      },
+      {
+        "src": "/icons/icon-192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/icons/icon-512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "id": "/?source=pwa",
+    "start_url": "/?source=pwa",
+    "background_color": "#3367D6",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#3367D6",
+    "description": "Not suspicious at all Ginko app"
+  }
